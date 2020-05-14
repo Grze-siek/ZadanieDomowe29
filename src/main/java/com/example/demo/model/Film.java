@@ -11,16 +11,18 @@ public class Film {
 //  @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Column(name="title")
+//    @Column(name="title", nullable= false)
     private String title;
 
 //    @Column(name="release_date")
+//    @DateTimeFormat(pattern="yyyy-MM-dd")
     private LocalDate releaseDate;
 
 //    @Column(name="description")
     private String description;
 
 //    @Column(name="category")
+//    @Enumerated(EnumType.STRING)
     private FilmCategory category;
 
     public Long getId() {

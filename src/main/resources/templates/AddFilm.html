@@ -5,12 +5,12 @@
     <title>Add film</title>
 </head>
 <body>
-<form method="post" th:action="${mode == '/addFilm'}" th:object="${Film}">
+<form method="post" th:action="${mode == '/films/addFilm'}" th:object="${Film}">
     Tytuł: <input type="text" th:field="*{title}"><br/>
     Data premiery: <input type="date" th:field="*{releaseDate}" min="1890-01-01" max="2020-12-31" />
     Opis: <textarea rows="30" placeholder="Opis filmu..." th:field="*{description}"></textarea><br/>
     Kategoria:
-    <select th:field="*{species}">
+    <select th:field="*{category}">
         <option disabled selected value="">Wybierz...</option>
         <option value="THRILLER">triller</option>
         <option value="KOMEDIA">komedia</option>

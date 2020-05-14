@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Baza filmów</title>
+</head>
+<br>
+    <h1>Baza filmów</h1>
+
+    <a href="/films/addFilm">Dodaj nowy film</a></br/>
+
+    Kategorie:
+    <a href="/films">Wszystkie</a>
+    <a href="/films?kategoria=TRILLER">triller</a>
+    <a href="/films?kategoria=KOMEDIA">komedia</a>
+    <a href="/films?kategoria=DRAMAT">dramat</a>
+    <a href="/films?kategoria=ANIMOWANY">animowany</a>
+    <a href="/films?kategoria=PRZYGODOWY">przygodowy</a>
+    <a href="/films?kategoria=FANSTASY">fantasy</a>
+    <a href="/films?kategoria=HORROR">horror</a><br/>
+
+    <h2>Lista filmów:</h2>
+    <a th:each="film: ${films}" th:href="@{'/films/film?id=' + ${film.id}}">
+        <h2 th:text="${film.title}">Tytuł</h2>
+        <p th:text="${film.description}">Kategoria</p>
+    </a>
+</body>
+</html>

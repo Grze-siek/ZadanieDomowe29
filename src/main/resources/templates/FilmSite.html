@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegoly</title>
+</head>
+<body>
+    <h1>Opis filmu</h1>
+
+    <a href="/films">Powrót do listy filmów</a><br/>
+
+    <h2 th:text="${film.title}">Tytuł</h2>
+
+    <p th:text="${film.description}">Opis filmu</p>
+</body>
+</html>
